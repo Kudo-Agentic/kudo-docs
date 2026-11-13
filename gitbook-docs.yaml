@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Kudo
+  structure:
+    - type: space
+      key: space-kudo-docs
+      title: Kudo Docs
+      path: docs
+      default: true
+      content:
+        directory: ./
+        language: en

@@ -1,0 +1,32 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+redirects:
+  overview/why-kudo: why-kudo.md
+  overview/how-it-works: how-it-works/README.md
+  overview/roadmap: roadmap.md
+  the-promise-layer/covenant-nfts: how-it-works/covenant-nfts.md
+  the-promise-layer/covenant-nfts/covenant-types: how-it-works/covenant-types.md
+  the-promise-layer/evaluator-and-hooks: how-it-works/evaluator-and-hooks.md
+  the-promise-layer/remember: how-it-works/record.md
+  the-promise-layer/promise-types: how-it-works/promise-types.md
+  the-promise-layer/judge: how-it-works/evaluator-and-hooks.md
+  build/integrate: integrate.md
+  build/contracts: contracts.md
+  token: kudo/README.md
+  token/token: kudo/README.md
+  token/token/utility: kudo/utility.md
+  usdkudo/token: kudo/README.md
+  usdkudo/token/utility: kudo/utility.md
+  about/about: about.md
+  about/links: links.md
+  about/glossary: glossary.md
+  roadmap/roadmap: roadmap.md
+  concepts/promise-types: how-it-works/promise-types.md
+  concepts/willing-vs-able: why-kudo.md
+  how-it-works/willing-vs-able: why-kudo.md
+  how-it-works/modules: how-it-works/covenant-types.md
+  remember: how-it-works/record.md
