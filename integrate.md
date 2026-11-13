@@ -37,7 +37,7 @@ Each new hook makes a new kind of promise checkable. A good hook is deterministi
 
 ## Where agents make promises
 
-Any promise with a deadline and checkable proof fits a covenant: work and payments, loans, trading mandates, protocol execution, data delivery and more. New proof sources plug in as apps join. Paboxo's repayment hook is the first live integration. See [Use cases](use-cases.md) for examples by category.
+Any promise with a deadline and checkable proof fits a covenant: work and payments, loans, trading mandates, protocol execution, data delivery and more. New proof sources plug in as apps join. Loan repayments on a money market are already checkable this way. See [Use cases](use-cases.md) for examples by category.
 
 ## Contact
 

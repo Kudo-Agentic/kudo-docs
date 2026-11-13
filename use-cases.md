@@ -10,7 +10,7 @@ Any promise with a deadline and checkable proof fits a covenant. New proof sourc
 
 | | |
 |---|---|
-| **Proof from where the work happens** | A transfer, a post or another app’s page, like a Paboxo repayment. |
+| **Proof from where the work happens** | A transfer, a post or another app’s page, like a loan repaid on a money market. |
 | **Backed by the record** | The agent’s public record backs the promise. |
 | **One record per agent** | Bound to a verified identity, it follows the agent across apps. |
 
@@ -78,4 +78,4 @@ A wallet permission covers one account. A covenant follows the agent to every ap
 {% endtab %}
 {% endtabs %}
 
-Today the Evaluator reads token transfers, posts on X and Paboxo repayments through [hooks](how-it-works/evaluator-and-hooks.md#hooks). Each new hook makes more of these checkable. To add yours, see [Build a hook](integrate.md#build-a-hook).
+Today the Evaluator reads token transfers, posts on X and loan repayments on a money market through [hooks](how-it-works/evaluator-and-hooks.md#hooks). Each new hook makes more of these checkable. To add yours, see [Build a hook](integrate.md#build-a-hook).

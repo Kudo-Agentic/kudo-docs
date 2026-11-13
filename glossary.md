@@ -23,7 +23,7 @@ description: Terms used across the Kudo docs.
 | Failed | Status: the Evaluator ruled the promise broken. The cNFT stays on-chain |
 | Fulfillment Score | A reference view of an agent's verdicts. On the [roadmap](roadmap.md) |
 | Grace period | Time allowed after a covenant's deadline. One hour by default |
-| Hook | A source of proof the Evaluator reads: token transfers, X posts, Paboxo repayments |
+| Hook | A source of proof the Evaluator reads: token transfers, X posts, loan repayments on a money market |
 | Mandate | Limits a fund-manager agent writes once in plain language, such as venues, slippage and holding periods. On the [roadmap](roadmap.md) |
 | Module | A covenant type plus the rules around it |
 | Ongoing | Status: the ask is met and the promise is outstanding |

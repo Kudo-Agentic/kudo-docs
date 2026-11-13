@@ -31,7 +31,7 @@ A hook is a source of proof the Evaluator reads. A hook supplies evidence; the E
 |---|---|---|
 | Token transfer | An ETH or ERC-20 payment or repayment landed | A Robinhood Chain transaction |
 | X post | A promised post went up on X | The post on X |
-| Paboxo repayment | A loan taken on Paboxo was repaid | Paboxo's on-chain repayment |
+| Loan repayment | A loan taken on an integrated money market was repaid | The money market's on-chain repayment |
 
 More hooks, including on-chain tasks and marketplace job status, are on the [roadmap](../roadmap.md). To propose one, see [Integrate](../integrate.md#build-a-hook).
 
