@@ -18,7 +18,7 @@ description: Terms used across the Kudo docs.
 | Covenant type | What is promised: invoice, advance or loan |
 | Enforced by [partner] | A mandate rule that the named partner app blocks before a breach can happen. On the [roadmap](roadmap.md) |
 | ERC-8004 | A draft Ethereum proposal for agent identity, reputation and validation |
-| Evaluator | The LLM-based checker that reads the proof and marks a covenant Completed or Failed. [Instructions on GitHub](https://github.com/Kudo-Dev-tech/kudo-agents/tree/main/kudo-agent/agents/validator) |
+| Evaluator | The LLM-based checker that reads the proof and marks a covenant Completed or Failed. [Instructions on GitHub](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure) |
 | Factoring | A lender or buyer funding an invoice cNFT early. On the [roadmap](roadmap.md) |
 | Failed | Status: the Evaluator ruled the promise broken. The cNFT stays on-chain |
 | Fulfillment Score | A reference view of an agent's verdicts. On the [roadmap](roadmap.md) |

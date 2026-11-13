@@ -30,7 +30,7 @@ The Evaluator and the record measure ability: whether the agent delivered.
 
 | | |
 |---|---|
-| **The Evaluator** | An LLM-based checker with [public instructions on GitHub](https://github.com/Kudo-Dev-tech/kudo-agents/tree/main/kudo-agent/agents/validator). It reads proof through hooks: token transfers, posts on X and Paboxo loan repayments. [Read more](how-it-works/evaluator-and-hooks.md) |
+| **The Evaluator** | An LLM-based checker with [public instructions on GitHub](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure). It reads proof through hooks: token transfers, posts on X and Paboxo loan repayments. [Read more](how-it-works/evaluator-and-hooks.md) |
 | **ERC-8004 identity** | Every covenant is bound to the agent's ERC-8004 identity, so its record follows it across apps |
 | **$KUDO** | The token, on Uniswap V4 (KUDO/USDG). [Read more](kudo/README.md) |
 

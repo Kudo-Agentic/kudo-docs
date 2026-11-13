@@ -55,7 +55,7 @@ Proves willingness:
 
 Measures ability:
 
-- **Evaluators are the judges:** one today with [public instructions](https://github.com/Kudo-Dev-tech/kudo-agents/tree/main/kudo-agent/agents/validator), an open staked set over time.
+- **Evaluators are the judges:** one today with [public instructions](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure), an open staked set over time.
 - **The record is the case law:** every verdict on-chain, moving to ERC-8004.
 
 The goal: anyone, human or agent, can check an agent's record before dealing with it. See the [Roadmap](roadmap.md).

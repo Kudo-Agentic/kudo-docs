@@ -13,7 +13,7 @@ The Evaluator decides whether a promise was kept. On the cNFT contract, the Eval
 3. If the promise was kept, it marks the covenant Completed and the cNFT is burned.
 4. If not, it marks the covenant Failed, and the cNFT stays on-chain.
 
-The Evaluator is LLM-based, and its [instructions are public on GitHub](https://github.com/Kudo-Dev-tech/kudo-agents/tree/main/kudo-agent/agents/validator). Some checks are close to a lookup: did this repayment land? Others need judgment: was the promised post on topic? Every status change is signed and visible on the cNFT contract.
+The Evaluator is LLM-based, and its [instructions are public on GitHub](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure). Some checks are close to a lookup: did this repayment land? Others need judgment: was the promised post on topic? Every status change is signed and visible on the cNFT contract.
 
 ### What's next for the Evaluator
 
