@@ -3,5 +3,7 @@
   "framework": null,
   "installCommand": "npm ci --prefix preview",
   "buildCommand": "npm run build --prefix preview",
-  "outputDirectory": "preview/dist"
+  "outputDirectory": "preview/dist",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

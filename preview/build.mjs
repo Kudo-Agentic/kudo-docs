@@ -2,8 +2,9 @@
 // static site in preview/dist laid out like a published GitBook site.
 // GitBook itself reads the Markdown in the repo root; this is only for preview.
 //
-//   cd preview && npm install && npm run build
-//   open dist/index.html
+//   cd preview && npm install && npm run preview   # http://localhost:4000
+// Links are root-absolute clean URLs (/roadmap), so open the site through
+// serve.mjs (or Vercel with cleanUrls), not as files.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -64,11 +65,11 @@ function frontMatter(md) {
   return { meta, body: md.slice(m[0].length) };
 }
 
-// Relative link from one output file to another output path.
-function rel(fromOut, toOut) {
-  let r = path.posix.relative(path.posix.dirname(fromOut), toOut);
-  return r || path.posix.basename(toOut);
-}
+// Root-absolute clean URL for an output path, as served on Vercel with
+// cleanUrls: "how-it-works/index.html" -> "/how-it-works",
+// "roadmap.html" -> "/roadmap". Absolute, so links work with or without a
+// trailing slash on the current URL.
+const href = (o) => "/" + o.replace(/(^|\/)index\.html$/, "").replace(/\.html$/, "");
 
 const ICONS = {
   info: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
@@ -117,7 +118,7 @@ function renderPage(srcRel, pagesByOut) {
           : path.posix.normalize(path.posix.join(path.posix.dirname(srcRel), p));
         const t = outPath(target);
         if (!pagesByOut.has(t)) console.warn(`  ! ${srcRel}: link to missing page ${url}`);
-        return `${attr}="${rel(pageOut, t)}${hash ? "#" + hash : ""}"`;
+        return `${attr}="${href(t)}${hash ? "#" + hash : ""}"`;
       }
       return all;
     });
@@ -155,7 +156,7 @@ function navHtml(items, current, depth = 0) {
       const o = outPath(it.src);
       const active = o === current;
       const open = active || flatten(it.children).some((c) => outPath(c.src) === current);
-      return `<li${open ? ' class="open"' : ""}><a href="${rel(current, o)}"${active ? ' class="active" aria-current="page"' : ""}>${esc(it.title)}${
+      return `<li${open ? ' class="open"' : ""}><a href="${href(o)}"${active ? ' class="active" aria-current="page"' : ""}>${esc(it.title)}${
         it.children.length ? '<svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>' : ""
       }</a>${navHtml(it.children, current, depth + 1)}</li>`;
     })
@@ -171,9 +172,9 @@ function layout({ groups, page, current, prev, next, crumbs, searchIndexRel, ass
     : "";
   const card = (p, dir) =>
     p
-      ? `<a class="pn pn-${dir}" href="${rel(current, outPath(p.src))}"><span class="pn-label">${dir === "prev" ? "Previous" : "Next"}</span><span class="pn-title">${esc(p.title)}</span></a>`
+      ? `<a class="pn pn-${dir}" href="${href(outPath(p.src))}"><span class="pn-label">${dir === "prev" ? "Previous" : "Next"}</span><span class="pn-title">${esc(p.title)}</span></a>`
       : "<span></span>";
-  const home = rel(current, "index.html");
+  const home = "/";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -201,7 +202,7 @@ function layout({ groups, page, current, prev, next, crumbs, searchIndexRel, ass
   <aside class="sidebar"><div class="sidebar-inner">${nav}</div></aside>
   <main class="main">
     <article class="page">
-      ${crumbs.length ? `<div class="crumbs">${crumbs.map((c) => `<a href="${rel(current, outPath(c.src))}">${esc(c.title)}</a>`).join('<span>/</span>')}</div>` : ""}
+      ${crumbs.length ? `<div class="crumbs">${crumbs.map((c) => `<a href="${href(outPath(c.src))}">${esc(c.title)}</a>`).join('<span>/</span>')}</div>` : ""}
       <header class="page-header">
         <h1>${esc(page.title || "")}</h1>
         ${page.description ? `<p class="page-desc">${esc(page.description)}</p>` : ""}
@@ -218,7 +219,7 @@ function layout({ groups, page, current, prev, next, crumbs, searchIndexRel, ass
     <ul class="search-results"></ul>
   </div>
 </div>
-<script>window.__SEARCH_URL=${JSON.stringify(searchIndexRel)};window.__BASE=${JSON.stringify(rel(current, "x").replace(/x$/, ""))};</script>
+<script>window.__SEARCH_URL=${JSON.stringify(searchIndexRel)};window.__BASE="/";</script>
 <script src="${searchIndexRel}"></script>
 <script src="${assetsRel}site.js"></script>
 </body>
@@ -244,7 +245,7 @@ const index = [];
 const rendered = all.map((p) => ({ p, r: renderPage(p.src, byOut) }));
 for (const { p, r } of rendered) {
   r.title ||= p.title;
-  index.push({ u: outPath(p.src), t: p.title, d: r.description, x: r.text.slice(0, 4000) });
+  index.push({ u: href(outPath(p.src)).slice(1), t: p.title, d: r.description, x: r.text.slice(0, 4000) });
 }
 fs.writeFileSync(path.join(out, "search-index.js"), "window.__SEARCH=" + JSON.stringify(index) + ";");
 
@@ -252,7 +253,6 @@ rendered.forEach(({ p, r }, i) => {
   const current = outPath(p.src);
   const crumbs = [];
   for (let c = parentOf.get(p); c; c = parentOf.get(c)) crumbs.unshift(c);
-  const depthPrefix = "../".repeat(current.split("/").length - 1);
   const html = layout({
     groups,
     page: r,
@@ -260,8 +260,8 @@ rendered.forEach(({ p, r }, i) => {
     prev: all[i - 1],
     next: all[i + 1],
     crumbs,
-    searchIndexRel: depthPrefix + "search-index.js",
-    assetsRel: depthPrefix + "_assets/",
+    searchIndexRel: "/search-index.js",
+    assetsRel: "/_assets/",
   });
   fs.mkdirSync(path.dirname(path.join(out, current)), { recursive: true });
   fs.writeFileSync(path.join(out, current), html);
