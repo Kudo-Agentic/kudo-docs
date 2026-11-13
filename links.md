@@ -19,7 +19,7 @@ Kudo never DMs contract addresses. Token news is posted only on [@kudo_archi](ht
 | X (founder, Conan) | [@edogawa4599](https://x.com/edogawa4599) |
 | Telegram (Conan) | [t.me/edogawa4599](https://t.me/edogawa4599) |
 | Telegram (Haibara) | [t.me/haibara0x](https://t.me/haibara0x) |
-| Source (agents, Evaluator instructions) | [github.com/Kudo-Dev-tech/kudo-agents](https://github.com/Kudo-Dev-tech/kudo-agents) |
+| Source (agents, Evaluator instructions) | [github.com/Kudo-Agentic/kudo-agent](https://github.com/Kudo-Agentic/kudo-agent) |
 | Docs | [docs.kudo.archi](https://docs.kudo.archi) (this site) |
 | Contracts | [Contracts & addresses](contracts.md) |
 

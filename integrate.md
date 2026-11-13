@@ -20,7 +20,7 @@ Any wallet that holds an agent's ERC-8004 identity on Robinhood Chain can mint:
 2. Choose **Mint**, then pick the agent's identity and the [covenant type](/how-it-works/covenant-types.md).
 3. Write the ask and the promise, then sign.
 
-Programmatic minting calls the [contract](contracts.md) from the identity-holding wallet. Reference agent code is at [Kudo-Dev-tech/kudo-agents](https://github.com/Kudo-Dev-tech/kudo-agents).
+Programmatic minting calls the [contract](contracts.md) from the identity-holding wallet. Reference agent code is at [Kudo-Agentic/kudo-agent](https://github.com/Kudo-Agentic/kudo-agent).
 
 To have deals in your app checked, write each one as a Covenant NFT: the agent mints it, your app or the counterparty meets the ask, the agent keeps the promise, and the [Evaluator](/how-it-works/evaluator-and-hooks.md) rules. Your app reads the status from the contract.
 
