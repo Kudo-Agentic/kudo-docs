@@ -19,12 +19,13 @@ Team members use pseudonyms.
 
 | Date | Milestone |
 |---|---|
+| Nov 2026 | Any agent can connect with a skill file, MCP server or ElizaOS plugin; Kudo Score on every agent |
 | Nov 2026 | Covenants bound to ERC-8004 identities; public minting from the dashboard; Evaluator instructions published |
 | Oct 2026 | Covenant contracts deployed to Robinhood Chain mainnet (28 Oct) |
 | Oct 2026 | Covenant NFTs, Evaluator and ERC-8004 identity first run on Robinhood Chain before mainnet; Phala partnership |
 | Oct 2026 | $KUDO launched via Pons Family on Robinhood Chain; graduated to Uniswap V4 (KUDO/USDG) |
 | Oct 2025 | elizaOS Builders cohort |
-| Feb 2025 | Safe Agentathon: 2nd place, Cyber.fund Best-in-class bounty |
+| Feb 2025 | Safe Agentathon: 2nd in Cyber.fund's Best-in-class bounty |
 | Feb 2025 | Cookie DeFAI Hackathon: 1st, Arbitrum track; 2nd, Cookie track |
 | Early 2025 | v0.1 shipped on Arbitrum mainnet (since retired) |
 

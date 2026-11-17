@@ -5,5 +5,137 @@
   "buildCommand": "npm run build --prefix preview",
   "outputDirectory": "preview/dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/overview/why-kudo",
+      "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/overview/how-it-works",
+      "destination": "/how-it-works",
+      "permanent": true
+    },
+    {
+      "source": "/overview/roadmap",
+      "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/covenant-nfts",
+      "destination": "/how-it-works/covenant-nfts",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/covenant-nfts/covenant-types",
+      "destination": "/how-it-works/covenant-types",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/evaluator-and-hooks",
+      "destination": "/how-it-works/evaluator-and-hooks",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/remember",
+      "destination": "/how-it-works/record",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/promise-types",
+      "destination": "/how-it-works/promise-types",
+      "permanent": true
+    },
+    {
+      "source": "/the-promise-layer/judge",
+      "destination": "/how-it-works/evaluator-and-hooks",
+      "permanent": true
+    },
+    {
+      "source": "/build/integrate",
+      "destination": "/integrate",
+      "permanent": true
+    },
+    {
+      "source": "/build/contracts",
+      "destination": "/contracts",
+      "permanent": true
+    },
+    {
+      "source": "/token",
+      "destination": "/kudo",
+      "permanent": true
+    },
+    {
+      "source": "/token/token",
+      "destination": "/kudo",
+      "permanent": true
+    },
+    {
+      "source": "/token/token/utility",
+      "destination": "/kudo/utility",
+      "permanent": true
+    },
+    {
+      "source": "/usdkudo/token",
+      "destination": "/kudo",
+      "permanent": true
+    },
+    {
+      "source": "/usdkudo/token/utility",
+      "destination": "/kudo/utility",
+      "permanent": true
+    },
+    {
+      "source": "/about/about",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about/links",
+      "destination": "/links",
+      "permanent": true
+    },
+    {
+      "source": "/about/glossary",
+      "destination": "/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/roadmap/roadmap",
+      "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/promise-types",
+      "destination": "/how-it-works/promise-types",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/willing-vs-able",
+      "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works/willing-vs-able",
+      "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works/modules",
+      "destination": "/how-it-works/covenant-types",
+      "permanent": true
+    },
+    {
+      "source": "/remember",
+      "destination": "/how-it-works/record",
+      "permanent": true
+    },
+    {
+      "source": "/roadmap",
+      "destination": "/why-kudo",
+      "permanent": true
+    }
+  ]
 }

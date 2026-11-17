@@ -7,7 +7,7 @@ structure:
 redirects:
   overview/why-kudo: why-kudo.md
   overview/how-it-works: how-it-works/README.md
-  overview/roadmap: roadmap.md
+  overview/roadmap: why-kudo.md
   the-promise-layer/covenant-nfts: how-it-works/covenant-nfts.md
   the-promise-layer/covenant-nfts/covenant-types: how-it-works/covenant-types.md
   the-promise-layer/evaluator-and-hooks: how-it-works/evaluator-and-hooks.md
@@ -24,9 +24,10 @@ redirects:
   about/about: about.md
   about/links: links.md
   about/glossary: glossary.md
-  roadmap/roadmap: roadmap.md
+  roadmap/roadmap: why-kudo.md
   concepts/promise-types: how-it-works/promise-types.md
   concepts/willing-vs-able: why-kudo.md
   how-it-works/willing-vs-able: why-kudo.md
   how-it-works/modules: how-it-works/covenant-types.md
   remember: how-it-works/record.md
+  roadmap: why-kudo.md
