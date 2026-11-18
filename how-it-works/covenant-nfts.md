@@ -1,10 +1,12 @@
 ---
-description: The on-chain record of a single promise, from mint to verdict.
+description: The on-chain contract for a single promise, from mint to verdict. With TEE verification, the core of Kudo.
 ---
 
 # Covenant NFTs
 
-A Covenant NFT (cNFT) does what a signed contract does between people: it states the terms, names the parties and sets a deadline. Each cNFT records exactly one promise.
+**Part of: proving willingness.** Together with [TEE](tee.md), this is the core of Kudo.
+
+A Covenant NFT (cNFT) does what a signed contract does between people: it states the terms, names the parties and sets a deadline. Each cNFT records exactly one promise, and it puts that promise in writing before anything is delivered.
 
 The contract is [`0x1930d0feab14b024353bf22ade03db989ad640c7`](https://robin.etherscan.io/address/0x1930d0feab14b024353bf22ade03db989ad640c7) on Robinhood Chain mainnet. See [Contracts & addresses](../contracts.md).
 
@@ -12,10 +14,10 @@ The contract is [`0x1930d0feab14b024353bf22ade03db989ad640c7`](https://robin.eth
 
 | Field | Meaning |
 |---|---|
-| Type | Invoice, Advance or Loan. See [Covenant types](covenant-types.md) |
+| Type | What kind of promise it is, such as an invoice, an advance or a loan. See [Covenant types](covenant-types.md) |
 | Agent | The ERC-8004 identity the covenant is bound to; the minting wallet must hold it |
-| Ask | What the agent wants: money, work or another resource |
-| Promise | What the agent commits to in return |
+| Ask | What the agent wants: a payment in any token, work, or another resource |
+| Promise | What the agent commits to in return: a payment in any token, or work with no payment at all |
 | Amount | The value involved |
 | Deadline | When the promise must be kept, with a default one-hour grace period |
 | Status | Open, Ongoing, Completed or Failed |
@@ -39,4 +41,4 @@ The contract is [`0x1930d0feab14b024353bf22ade03db989ad640c7`](https://robin.eth
 
 ## Promises can change hands
 
-cNFTs are ERC-721 tokens and can be transferred. The transfer moves the record of the promise; payment is checked against the covenant's terms. That opens the way to factoring: an agent holding an invoice cNFT sells it at a discount to get paid early. Factoring is on the [roadmap](../roadmap.md).
+cNFTs are ERC-721 tokens and can be transferred. The transfer moves the record of the promise to its new holder. That is what makes a promise tradable: an agent holding an invoice cNFT can sell it at a discount to get paid early, the way a business factors an invoice.

@@ -1,5 +1,5 @@
 ---
-description: Agents dealing for the first time can't see each other's history, so every stranger gets the same cautious terms. Kudo writes the history down.
+description: Agents dealing for the first time can't see each other's history, so every stranger gets the same cautious terms. Kudo writes the history down, and this is where it's heading.
 ---
 
 # Why Kudo
@@ -22,16 +22,10 @@ People didn't solve this by locking up every payment. They wrote promises down: 
 
 | In human commerce | On Kudo |
 |---|---|
-| A signed contract | A [Covenant NFT](how-it-works/covenant-nfts.md): type, ask, promise, amount, deadline |
+| Knowing who you're dealing with | An agent in a [TEE](how-it-works/tee.md): an attestation pins the exact code it runs |
+| A signed contract | A [Covenant NFT](how-it-works/covenant-nfts.md): ask, promise, amount, deadline |
 | Someone who checks performance | The [Evaluator](how-it-works/evaluator-and-hooks.md), reading proof through hooks |
-| A track record others can read | The [agent's record](how-it-works/record.md) of kept and broken promises |
-| Knowing who you're dealing with | An ERC-8004 identity bound to every covenant, and TEE attestation where the agent runs in an enclave |
-
-The record is the part that compounds. Every covenant adds to one public place where people and agents can check what an agent promised and whether it delivered, before they deal with it.
-
-## Where Kudo sits
-
-Kudo sits underneath other apps. A lender decides whom to lend to and on what terms. A marketplace matches agents with work and holds the money. Either can write the deal as a Covenant NFT, have it checked, and read the record, without Kudo taking either role.
+| A track record others can read | The [agent's record](how-it-works/record.md) of kept and broken promises, tied to its ERC-8004 identity |
 
 ## Willing and able
 
@@ -39,23 +33,27 @@ An agent's reputation has two parts, and Kudo handles them separately:
 
 | | Question | Handled by |
 |---|---|---|
-| **Willingness** | Will the agent try to keep its promise? | The Covenant NFT and the agent's attested code: the promise is on-chain, and the TEE attestation shows the agent runs code written to keep it |
-| **Ability** | Did it deliver, and how well? | The Evaluator and the agent's record: each outcome is checked against proof and stays with the agent's ERC-8004 identity (record writes to ERC-8004 are on the [roadmap](roadmap.md)) |
+| **Willingness** | Will the agent try to keep its promise? | **TEE + Covenant NFT.** The promise is on-chain, and the TEE attestation shows the agent runs code written to keep it |
+| **Ability** | Did it deliver, and how well? | **Evaluator + ERC-8004.** Each outcome is checked against proof and stays with the agent's identity across apps |
 
-Ability is the uncertain part: an agent can mean to pay and still run out of funds, or mean to deliver and still fall short. Kudo doesn't lend or set terms. Counterparties and lenders decide how much to rely on an agent, with its record in front of them.
+Willingness is the core: it is what lets a stranger take an agent's promise seriously before there is any history. Ability is the uncertain part: an agent can mean to pay and still run out of funds, or mean to deliver and still fall short. Kudo doesn't lend or set terms. Counterparties and lenders decide how much to rely on an agent, with its record in front of them.
 
-## The vision
+## Where Kudo sits
 
-**Kudo is building the legal system of the agentic world.**
+Kudo sits underneath other apps. A lender decides whom to lend to and on what terms. A marketplace matches agents with work and holds the money. Either can write the deal as a Covenant NFT, have it checked, and read the record, without Kudo taking either role.
 
-Proves willingness:
+<a id="the-vision"></a>
 
-- **Agents are the citizens.** A TEE attestation pins the code an agent runs, and an ERC-8004 identity carries its record across apps.
-- **Covenant NFTs are the contracts.** One promise per cNFT: ask, promise, amount and deadline.
+## Where this is heading
 
-Measures ability:
+**Kudo is building the legal system of the agentic world:** one place where any promise an agent makes can be written, judged and remembered, and where anyone, human or agent, can check an agent before dealing with it.
 
-- **Evaluators are the judges:** one today with [public instructions](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure), an open staked set over time.
-- **The record is the case law:** every verdict on-chain, moving to ERC-8004.
+Each part of that system grows the same way, by adding more of it rather than changing what it is:
 
-The goal: anyone, human or agent, can check an agent's record before dealing with it. See the [Roadmap](roadmap.md).
+- **Citizens.** More agents run in a TEE and publish an attestation, so more of the market is made of agents whose code anyone can check.
+- **Contracts.** Any promise with a deadline and checkable proof can become a [covenant type](how-it-works/covenant-types.md): payments, deliveries, loans, trading limits, protocol actions, data delivery. Promises can also change hands: an invoice cNFT can be sold to a buyer who gets paid when the agent pays. And alongside promises to *do* something sit [promises *not* to do something](how-it-works/promise-types.md), bound before the action rather than judged after it.
+- **Judges.** Today one Evaluator rules, with [public instructions](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure). Proof that needs no judgment is settled in code. Disputed verdicts go to more Evaluators, then to appeal, and in the end to an open set of Evaluators who stake $KUDO on their verdicts.
+- **Case law.** Verdicts are readable from ERC-8004 itself, so any app can use them without asking Kudo. The record grows to hold outcomes other apps choose to share, feedback from counterparties, and how well a fund-manager agent kept its own written limits.
+- **Courts everywhere.** Every app where agents work is a place a promise can be made and proved: each new [hook](how-it-works/evaluator-and-hooks.md#hooks) makes a new kind of promise checkable, and the record follows the agent across apps and chains.
+
+Every release is in the [dev log](https://app.kudo.archi/updates).
