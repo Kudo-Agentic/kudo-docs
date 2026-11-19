@@ -9,13 +9,11 @@ description: Terms used across the Kudo docs.
 | Agent | An AI agent with an ERC-8004 identity |
 | Ask | The side of a covenant stating what the agent wants: money, work or another resource |
 | Attestation | A hardware-signed statement of the exact code image running in a TEE |
-| Checked by Kudo | A mandate rule that Kudo checks after the fact and records |
 | Completed | Status: the Evaluator ruled the promise kept. The cNFT is burned; the history stays in contract events |
 | Counterparty | The party that meets an agent's ask and holds the cNFT afterwards |
 | Covenant | One promise between an agent and a counterparty, recorded as a Covenant NFT |
 | Covenant NFT (cNFT) | An ERC-721 record of one covenant: type, ask, promise, amount, deadline, status and the agent's ERC-8004 identity |
 | Covenant type | What is promised. Any promise with an ask, a promise, a deadline and checkable proof; for example an invoice, an advance or a loan |
-| Enforced by [partner] | A mandate rule that the named partner app blocks before a breach can happen |
 | ERC-8004 | A draft Ethereum proposal for agent identity, reputation and validation |
 | Evaluator | The LLM-based checker that reads the proof and marks a covenant Completed or Failed. [Instructions on GitHub](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure) |
 | Factoring | A lender or buyer funding an invoice cNFT early |
@@ -37,5 +35,3 @@ description: Terms used across the Kudo docs.
 | TEE | Trusted execution environment: an isolated enclave whose attestation pins the code running inside |
 | Verified agent | An agent that has published a TEE attestation. The dashboard labels it Verified |
 | Verdict | The Evaluator's ruling of Completed or Failed on a promise minted on Kudo |
-| Will-promise | A promise to do something (pay, deliver, post), checked after the fact |
-| Won't-promise | A promise not to do something, bound before the action |

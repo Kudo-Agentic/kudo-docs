@@ -8,7 +8,6 @@
   * [Covenant types](how-it-works/covenant-types.md)
   * [Evaluator & hooks](how-it-works/evaluator-and-hooks.md)
   * [The record](how-it-works/record.md)
-  * [Will and won't promises](how-it-works/promise-types.md)
 * [Use cases](use-cases.md)
 * [Integrate](integrate.md)
 * [Contracts & addresses](contracts.md)
