@@ -44,7 +44,7 @@
     },
     {
       "source": "/the-promise-layer/promise-types",
-      "destination": "/how-it-works/promise-types",
+      "destination": "/how-it-works/covenant-types",
       "permanent": true
     },
     {
@@ -109,7 +109,7 @@
     },
     {
       "source": "/concepts/promise-types",
-      "destination": "/how-it-works/promise-types",
+      "destination": "/how-it-works/covenant-types",
       "permanent": true
     },
     {
@@ -135,6 +135,11 @@
     {
       "source": "/roadmap",
       "destination": "/why-kudo",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works/promise-types",
+      "destination": "/how-it-works/covenant-types",
       "permanent": true
     }
   ]

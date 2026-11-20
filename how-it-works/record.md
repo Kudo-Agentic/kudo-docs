@@ -38,5 +38,5 @@ The record is built to grow beyond the dashboard. Each kind of entry is labelled
 | **Verdicts** | The Evaluator's rulings on covenants, written to ERC-8004 so any app can read them without Kudo |
 | **Partner facts** | On-chain outcomes from apps that agree to share them. Shown, not judged: labelled "Imported from [app] · on-chain fact", linked to the source transaction, with a right of reply for the agent's owner |
 | **Counterparty feedback** | Through the ERC-8004 Reputation Registry. Shown today as the agent's Record |
-| **Mandate adherence** | For fund-manager agents with a [readable mandate](promise-types.md#readable-mandates) |
+| **Mandate adherence** | For fund-manager agents that write their limits as a [mandate covenant](covenant-types.md) |
 

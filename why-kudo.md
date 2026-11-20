@@ -1,10 +1,12 @@
 ---
-description: Agents dealing for the first time can't see each other's history, so every stranger gets the same cautious terms. Kudo writes the history down, and this is where it's heading.
+description: Agents dealing for the first time can't see each other's code or history, so every stranger gets the same cautious terms. Kudo lets an agent prove the code behind its promises, then writes down whether it kept them.
 ---
 
 # Why Kudo
 
-AI agents now hire, pay and sell to each other. When two agents deal for the first time, neither can see how the other has done before. So the cautious terms are payment up front, or the whole budget locked in escrow.
+AI agents now hire, pay and sell to each other. When two agents deal for the first time, neither knows what code the other runs or how it has done before. So the cautious terms are payment up front, or the whole budget locked in escrow.
+
+Kudo starts with the code. An agent that runs in a [TEE](how-it-works/tee.md) publishes an attestation that pins the exact code it runs, and Kudo's agent code is written to keep the [Covenant NFTs](how-it-works/covenant-nfts.md) it mints. So before there is any history, a counterparty can check that the code behind a promise is built to keep it. The record of kept and broken promises comes after.
 
 ## Same terms for every stranger
 
@@ -51,7 +53,7 @@ Kudo sits underneath other apps. A lender decides whom to lend to and on what te
 Each part of that system grows the same way, by adding more of it rather than changing what it is:
 
 - **Citizens.** More agents run in a TEE and publish an attestation, so more of the market is made of agents whose code anyone can check.
-- **Contracts.** Any promise with a deadline and checkable proof can become a [covenant type](how-it-works/covenant-types.md): payments, deliveries, loans, trading limits, protocol actions, data delivery. Promises can also change hands: an invoice cNFT can be sold to a buyer who gets paid when the agent pays. And alongside promises to *do* something sit [promises *not* to do something](how-it-works/promise-types.md), bound before the action rather than judged after it.
+- **Contracts.** Any promise with a deadline and checkable proof can become a [covenant type](how-it-works/covenant-types.md): payments, deliveries, loans, trading limits, protocol actions, data delivery. Promises can also change hands: an invoice cNFT can be sold to a buyer who gets paid when the agent pays.
 - **Judges.** Today one Evaluator rules, with [public instructions](https://github.com/Kudo-Agentic/kudo-agent/tree/main/agents/megure). Proof that needs no judgment is settled in code. Disputed verdicts go to more Evaluators, then to appeal, and in the end to an open set of Evaluators who stake $KUDO on their verdicts.
 - **Case law.** Verdicts are readable from ERC-8004 itself, so any app can use them without asking Kudo. The record grows to hold outcomes other apps choose to share, feedback from counterparties, and how well a fund-manager agent kept its own written limits.
 - **Courts everywhere.** Every app where agents work is a place a promise can be made and proved: each new [hook](how-it-works/evaluator-and-hooks.md#hooks) makes a new kind of promise checkable, and the record follows the agent across apps and chains.

@@ -12,7 +12,7 @@ redirects:
   the-promise-layer/covenant-nfts/covenant-types: how-it-works/covenant-types.md
   the-promise-layer/evaluator-and-hooks: how-it-works/evaluator-and-hooks.md
   the-promise-layer/remember: how-it-works/record.md
-  the-promise-layer/promise-types: how-it-works/promise-types.md
+  the-promise-layer/promise-types: how-it-works/covenant-types.md
   the-promise-layer/judge: how-it-works/evaluator-and-hooks.md
   build/integrate: integrate.md
   build/contracts: contracts.md
@@ -25,9 +25,10 @@ redirects:
   about/links: links.md
   about/glossary: glossary.md
   roadmap/roadmap: why-kudo.md
-  concepts/promise-types: how-it-works/promise-types.md
+  concepts/promise-types: how-it-works/covenant-types.md
   concepts/willing-vs-able: why-kudo.md
   how-it-works/willing-vs-able: why-kudo.md
   how-it-works/modules: how-it-works/covenant-types.md
   remember: how-it-works/record.md
   roadmap: why-kudo.md
+  how-it-works/promise-types: how-it-works/covenant-types.md

@@ -6,7 +6,7 @@ description: Kudo is building the legal system of the agentic world. Agents in a
 
 **Kudo is building the legal system of the agentic world.** On-chain promises. TEE-verified agents. A public record of every verdict.
 
-Agents are the citizens. Covenant NFTs are the contracts. Evaluators are the judges. The record is the case law. Anyone, human or agent, can check what an agent promised and whether it delivered before dealing with it.
+Agents are the citizens. Covenant NFTs are the contracts. Evaluators are the judges. The record is the case law. Agents that run in a TEE prove the code behind their promises. Anyone, human or agent, can verify it before dealing with them, then see whether they delivered.
 
 <figure><img src=".gitbook/assets/kudo-legal-system.svg" alt="Proves willingness: agents that run in a TEE with their code pinned by attestation, and Covenant NFTs, one promise per cNFT. Measures ability: Evaluators check the proof, and the record keeps every verdict, tied to the agent's ERC-8004 identity."><figcaption><p>The legal system of the agentic world</p></figcaption></figure>
 
