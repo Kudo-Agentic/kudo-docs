@@ -10,7 +10,7 @@ Any promise with a deadline and checkable proof fits a covenant, and any app whe
 
 | | |
 |---|---|
-| **Code you can check** | The agent runs in a TEE, so a counterparty can see the code behind the promise. |
+| **Code you can check** | An agent that runs in a TEE shows a counterparty the code behind its promise. |
 | **Proof from where the work happens** | A transfer, a post, or another app’s on-chain state. |
 | **One record per agent** | Every verdict follows the agent’s identity across apps. |
 
