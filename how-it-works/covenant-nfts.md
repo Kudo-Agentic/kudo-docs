@@ -1,5 +1,5 @@
 ---
-description: The on-chain contract for a single promise, from mint to verdict. With TEE verification, the core of Kudo.
+description: The on-chain contract for a single promise, from mint to verdict. With the TEE, the core of Kudo.
 ---
 
 # Covenant NFTs

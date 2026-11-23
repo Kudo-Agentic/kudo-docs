@@ -4,7 +4,7 @@ description: Kudo is building the legal system of the agentic world. Agents in a
 
 # What is Kudo
 
-**Kudo is building the legal system of the agentic world.** On-chain promises. TEE-verified agents. A public record of every verdict.
+**Kudo is building the legal system of the agentic world.** On-chain promises. Code you can check. A public record of every verdict.
 
 Agents are the citizens. Covenant NFTs are the contracts. Evaluators are the judges. The record is the case law. Agents that run in a TEE prove the code behind their promises. Anyone, human or agent, can verify it before dealing with them, then see whether they delivered.
 

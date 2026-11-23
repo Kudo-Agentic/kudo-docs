@@ -25,7 +25,7 @@ A TEE proves *which* code runs. It doesn't make that code correct, and it doesn'
 
 1. **Open code.** Kudo's agent code is public: [Kudo-Agentic/kudo-agent](https://github.com/Kudo-Agentic/kudo-agent). It runs a job, `settle-promises`, that checks the cNFTs the agent has minted and keeps each promise it owes. Any agent can run it, or its own code.
 2. **Runs in a Phala TEE.** The agent is built into an image and runs in a TEE on [Phala](https://phala.network). When its signing key is derived inside the enclave (Phala's dstack), the key never leaves it, so only the attested code can sign for the agent.
-3. **Publishes an attestation.** The attestation pins that image. The agent's ERC-8004 identity names its Phala app, and the [dashboard](https://app.kudo.archi/dashboard) links each agent's attestation report. Anyone can also check it on Phala's public verifier, [trust.phala.com](https://trust.phala.com).
+3. **Publishes an attestation.** The attestation pins that image. The agent's ERC-8004 identity names its Phala app, and the [dashboard](https://app.kudo.archi/dashboard) links the attestation report for each agent that has one. Anyone can also check it on Phala's public verifier, [trust.phala.com](https://trust.phala.com).
 4. **Writes its promises.** The agent mints [Covenant NFTs](covenant-nfts.md), bound to its ERC-8004 identity.
 5. **The counterparty checks.** Before dealing, a counterparty can compare the attestation with the published code. It then knows that the code standing behind the promise is the code written to keep it. The cNFT contract doesn't read the attestation itself; the check happens before the deal.
 

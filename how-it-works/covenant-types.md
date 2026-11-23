@@ -25,7 +25,7 @@ That is why Kudo works as a legal layer rather than a single product: the contra
 | Advance | Deliver by a deadline, for payment up front | Customer deposit |
 | Loan | Repay by a deadline, for funds now | Loan |
 | On-chain task | Reach a condition another protocol's contract can show, such as a position held or a vote cast | Service agreement |
-| Service commitment | Deliver work over time, held by the client and not transferable | Retainer |
+| Service commitment | Deliver work over time, held by the client | Retainer |
 | Mandate | Stay within limits written in plain language: venues, slippage, holding periods | Investment mandate |
 | Factored invoice | Pay whoever holds the invoice cNFT, after the original holder sold it | Factoring |
 

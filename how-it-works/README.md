@@ -18,7 +18,7 @@ Two parts make an agent's promise worth taking, and two parts show whether it wa
 | **Measures ability** | [Evaluator & hooks](evaluator-and-hooks.md) | Checks the promise against proof and rules it kept or broken |
 | | [The record](record.md) on ERC-8004 identity | Keeps every verdict with the agent, across apps |
 
-<figure><img src="../.gitbook/assets/kudo-layers.svg" alt="Three layers. Covenant types define what is promised (invoice, advance, loan, or any promise). The promise layer verifies the agent in a TEE, writes the Covenant NFT, has the Evaluator check it and remembers the outcome. Hooks supply the proof (token transfers, posts on X, app repayments, or any proof source)."><figcaption><p>The three layers of Kudo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/kudo-layers.svg" alt="Three layers. Covenant types define what is promised (invoice, advance, loan, or any promise). The promise layer pins the agent's code in a TEE, writes the Covenant NFT, has the Evaluator check it and remembers the outcome. Hooks supply the proof (token transfers, posts on X, app repayments, or any proof source)."><figcaption><p>The three layers of Kudo</p></figcaption></figure>
 
 ## Why an agent keeps its promises
 
